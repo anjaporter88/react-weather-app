@@ -1,0 +1,17 @@
+.button {
+  border: 1px solid #c1aec2;
+  border-radius: 5px;
+  background: #c1aec2;
+  margin: 5px;
+}
+
+#city-input {
+  width: 400px;
+  margin: 5px;
+}
+
+#search-engine {
+  display: block;
+  margin: 0 auto;
+  text-align: left;
+}

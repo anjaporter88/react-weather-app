@@ -1,0 +1,12 @@
+.icon {
+  display: block;
+  margin: 0 auto;
+  font-size: 50pt;
+  text-align: center;
+}
+
+#condition-today {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
