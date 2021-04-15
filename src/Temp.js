@@ -7,9 +7,7 @@ export default function Temp() {
       <span id="temp">9</span>
       <span id="unit">°C</span>
       <button id="convert" className="button">
-        <a href="#" id="convert-link">
           Convert
-        </a>
       </button>
       <p className="info">
         feels like: <span id="feels-like">9</span>°C

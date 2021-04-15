@@ -9,11 +9,12 @@ export default function Footer() {
           <a
             href="https://github.com/anjaporter88/react-weather-app"
             target="_blank"
+            rel="noreferrer"
           >
             <em>Open-source code </em>
           </a>
           by
-          <a href="https://www.anjaporter.com" target="_blank">
+          <a href="https://www.anjaporter.com" target="_blank" rel="noreferrer">
             <em> Anja Porter</em>
           </a>
         </div>
