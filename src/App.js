@@ -23,18 +23,6 @@ export default function App() {
           <Search />
           <br />
 
-          <div className="row">
-            <div className="col-4">
-              <CityDate />
-            </div>
-            <div className="col-4">
-              <Today />
-            </div>
-            <div className="col-4">
-              <Temp />
-            </div>
-          </div>
-
           <HourForecast />
           <br />
 
