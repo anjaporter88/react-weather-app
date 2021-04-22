@@ -1,4 +1,4 @@
-import "./styles.css";
+import "./App.css";
 import Header from "./Header";
 import Background from "./Background";
 import Search from "./Search";

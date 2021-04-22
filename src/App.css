@@ -1,0 +1,19 @@
+.container {
+  display: inline-block;
+  position: relative;
+  z-index: 3;
+}
+
+.weather-app {
+  position: absolute;
+  z-index: 999;
+  margin: 0 auto;
+  align-items: center;
+  left: 10%;
+  right: 0;
+  top: 18.75%; /* Adjust this value to move the positioned div up and down */
+  width: 70%;
+  font-family: mostra-nuova, sans-serif;
+  font-weight: 400; /* bold would be 700 or bold */
+  font-size: 16pt;
+}
