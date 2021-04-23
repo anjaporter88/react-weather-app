@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import DateAndTime from "./DateAndTime";
+import WeatherInfo from "./WeatherInfo";
 import "./Search.css";
 
 export default function Search() {
@@ -12,10 +12,10 @@ export default function Search() {
       city: response.data.name,
       date: new Date(response.data.dt * 1000),
       temp: response.data.main.temp,
-      wind: response.data.wind.speed,
-      humidity: response.data.main.humidity,
-      feelsLike: response.data.main.feels_like,
       condition: response.data.weather[0].description,
+      feelsLike: response.data.main.feels_like,
+      humidity: response.data.main.humidity,
+      wind: response.data.wind.speed,
     });
     setReady(true);
   }
@@ -44,48 +44,8 @@ export default function Search() {
             </form>
           </div>
         </div>
-        <div className="city-date">
-          <div className="row">
-            <div className="col-4">
-              <span id="city">{weatherData.city}</span>
-              <p className="info" id="date">
-                <DateAndTime date={weatherData.date}/>
-              </p>
-            </div>
-            <div className="col-4">
-              <div className="today">
-                <i className="fas fa-sun icon" id="today-icon" />
-                <p className="info condition" />
-                <p id="condition-today">{weatherData.condition}</p>
-              </div>
-            </div>
-            <div className="col-4">
-              <div className="temp">
-                <span id="temp">{Math.round(weatherData.temp)}</span>
-                <span id="unit">°C</span>
-                <button id="convert" className="button">
-                  Convert
-                </button>
-                <p className="info">
-                  feels like:{" "}
-                  <span id="feels-like">
-                    {Math.round(weatherData.feelsLike)}
-                  </span>
-                  °C
-                </p>
-                <p className="info">
-                  humidity:{" "}
-                  <span id="humidity">{Math.round(weatherData.humidity)}</span>%
-                </p>
-                <p className="info">
-                  windspeed:{" "}
-                  <span id="wind">{Math.round(weatherData.wind)}</span>km/h
-                </p>
-              </div>
-            </div>
-          </div>
+        <WeatherInfo data={weatherData} />
         </div>
-      </div>
     );
   } else {
     const apiKey = "3ac4d291dda277122b73faa304a1df6a";
