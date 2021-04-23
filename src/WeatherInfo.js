@@ -13,15 +13,15 @@ export default function WeatherInfo(props) {
                         </p>
                     </div>
                 </div>
-                <div className="today">
-                    <div className="col-4">
+                <div className="col-4">
+                    <div className="today">
                         <i className="fas fa-sun icon" id="today-icon" />
                         <p className="info condition" />
                         <p id="condition-today">{props.data.condition}</p>
                     </div>
                 </div>
-                <div className="temp">
-                    <div className="col-4">
+                <div className="col-4">
+                    <div className="temp">
                         <span id="temp">{Math.round(props.data.temp)}</span>
                         <span id="unit">°C</span>
                         <button id="convert" className="button">
