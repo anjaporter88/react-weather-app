@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import Date from "./Date";
+import DateAndTime from "./DateAndTime";
 import "./Search.css";
 
 export default function Search() {
@@ -49,7 +49,7 @@ export default function Search() {
             <div className="col-4">
               <span id="city">{weatherData.city}</span>
               <p className="info" id="date">
-                <Date date={weatherData.date}/>
+                <DateAndTime date={weatherData.date}/>
               </p>
             </div>
             <div className="col-4">
