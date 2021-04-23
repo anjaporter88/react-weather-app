@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Date from "./Date";
 import "./Search.css";
+
 export default function Search() {
   const [ready, setReady] = useState(false);
   const [weatherData, setweatherData] = useState({});
+
   function handleResponse(response) {
     setweatherData({
       city: response.data.name,
+      date: new Date(response.data.dt * 1000),
       temp: response.data.main.temp,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
@@ -45,7 +49,7 @@ export default function Search() {
             <div className="col-4">
               <span id="city">{weatherData.city}</span>
               <p className="info" id="date">
-                Date and time
+                <Date date={weatherData.date}/>
               </p>
             </div>
             <div className="col-4">
@@ -88,6 +92,7 @@ export default function Search() {
     let city = "Brighton";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
-    return "Loading...";
+
+    return "Loading weather data...";
   }
 }
